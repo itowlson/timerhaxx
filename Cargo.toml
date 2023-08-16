@@ -1,0 +1,21 @@
+[package]
+name = "trigger-timer"
+version = "0.1.0"
+authors = ["Fermyon Engineering <engineering@fermyon.com>"]
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0.68"
+clap = { version = "3.1.15", features = ["derive", "env"] }
+futures = "0.3.25"
+serde = "1.0"
+spin-app = { git = "https://github.com/fermyon/spin", tag = "v1.3.0" }
+spin-core = { git = "https://github.com/fermyon/spin", tag = "v1.3.0" }
+spin-trigger = { git = "https://github.com/fermyon/spin", tag = "v1.3.0" }
+tokio = { version = "1.11", features = [ "full" ] }
+tokio-scoped = "0.2.0"
+wasmtime = { version = "8.0.1", features = ["component-model"] }
+
+[[bin]]
+name = "trigger-timer"
+path = "src/main.rs"
